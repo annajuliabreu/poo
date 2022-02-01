@@ -51,10 +51,6 @@ class Trampolin{
     }
 
     public entrar():void{
-        // usar o método push - ele adiciona um ou mais elementos
-        // no final de uma array e retorna o novo tamanho desse array :)
-
-
         // usar o método splice - ele remove itens de um array
         // enquanto adiciona um ou mais :)
         // .splice(posicao, qntd, o que eu quero inserir de novo)
@@ -71,13 +67,9 @@ class Trampolin{
     }
 
     public sair():void{
-        // usar o método splice? - ele remove itens de um array
+        // usar o método splice - ele remove itens de um array
         // enquanto adiciona um ou mais :)
 
-        //  ou 
-
-        // usar o método pop - ele remove e retorna o ultimo 
-        // elemento de um array :)
         this.esperando.splice(this.esperando.length - 1, 0, this.brincando[this.brincando.length - 1]);
         if(this.brincando != null){
             this.brincando.splice(this.brincando.length - 1, 1);
