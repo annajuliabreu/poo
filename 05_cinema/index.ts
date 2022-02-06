@@ -77,7 +77,6 @@ class Sala{
             return false;
         }
         this.cadeiras[posicao] = cliente;
-        // this.cadeiras.splice(-1,0,cliente);
         return true;
     }
 
@@ -103,39 +102,39 @@ class Sala{
 
 // # caso - inicializar
 let cinema:Sala = new Sala(4);
-console.log(cinema);
+console.log(cinema.toString());
 // [ ]
 
 let cine:Sala = new Sala(5);
-console.log(cine);
-// [-----]
+console.log(cine.toString());
+// [ - - - - - ]
 
 let cineminha:Sala = new Sala(4);
-console.log(cineminha);
-//  [----]
+console.log(cineminha.toString());
+//  [ - - - - ]
 
 console.log("---");
 
 // // # caso - reservar
 cinema.reservar(new Client("davi", "3232"), 0);
 cinema.reservar(new Client("joao", "3131"), 3);
-console.log(cinema);
+console.log(cinema.toString());
 // [ davi:3232 - - joao:3131 ]
 
 cinema.reservar(new Client("rute", "3030"), 0);
-console.log(cinema);
+console.log(cinema.toString());
 // fail: cadeira ja esta ocupada
 
 cinema.reservar(new Client("davi", "3232"), 2);
-console.log(cinema);
+console.log(cinema.toString());
 // fail: cadeira ja esta ocupada
 
 // # caso - cancelar reserva
 cinema.cancelar("davi");
-console.log(cinema);
+console.log(cinema.toString());
 // [ - - - joao:3131 ]
 
 cinema.cancelar("julia");
-console.log(cinema);
+console.log(cinema.toString());
 // fail: cliente nao esta no cinema
 // [ - - - joao:3131 ]
