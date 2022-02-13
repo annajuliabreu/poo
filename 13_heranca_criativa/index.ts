@@ -2,12 +2,10 @@ import { timeStamp } from "console";
 
 class Pedido{
     private nomeCliente:string;
-    // private taxaDeServico:number;
     private itensConsumidos:Array<Prato>
 
     public constructor(nomeCliente:string, itensConsumidos:Array<Prato>){
         this.nomeCliente = nomeCliente;
-        // this.taxaDeServico = taxaDeServico;
         this.itensConsumidos = itensConsumidos;
     }
 
