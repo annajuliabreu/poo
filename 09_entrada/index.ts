@@ -218,7 +218,7 @@ class IO{
         let cleanMax = words[4];
         lilo = new Tamagotchi(nome, energyMax, hungryMax, cleanMax);
       }else{
-        console.log("fail: comando inválido")
+        console.log("fail: comando inválido");
       }
     }
   }
